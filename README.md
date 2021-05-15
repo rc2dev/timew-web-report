@@ -1,6 +1,6 @@
 # timew-web-report
 
-Get Timewarrior's total time per tag per week through a web API.
+Get Timewarrior's total time per tag per week through a web API/page.
 
 ## License
 
