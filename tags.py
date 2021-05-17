@@ -5,7 +5,7 @@ def calculate_totals():
     date_format = '%Y%m%dT%H%M%SZ'
 
     tw = timewarrior.TimeWarrior()
-    summary = tw.summary('2021-01-04', datetime.today().strftime('%Y-%m-%d'))
+    summary = tw.summary('1970-01-01', datetime.now())
 
     totals = {}
     for entry in summary:
