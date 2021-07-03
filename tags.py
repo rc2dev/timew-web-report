@@ -20,14 +20,23 @@ def calculate_totals():
         if week not in totals:
             totals[week] = {}
 
-        for tag in entry['tags']:
+        for tag in entry['tags'] + ['_all']:
             if tag in totals[week]:
                 totals[week][tag] += elapsed
             else:
                 totals[week][tag] = elapsed
 
+
     for week in totals:
         for tag in totals[week]:
-            totals[week][tag] = str(totals[week][tag])
+            totals[week][tag] = timedelta_format(totals[week][tag])
 
     return totals
+
+
+def timedelta_format(delta):
+    total_seconds = int(delta.total_seconds())
+    hours, remainder = divmod(total_seconds, 60 * 60)
+    minutes, seconds = divmod(remainder, 60)
+
+    return f'{hours:02}:{minutes:02}:{seconds:02}'

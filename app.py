@@ -21,8 +21,12 @@ def index():
 def view_totals():
     data = calculate_totals()
     df = pd.DataFrame.from_dict(data, orient='index')
+
+    # Configure display
     df.fillna('-', inplace=True)
     df.sort_index(ascending=False, inplace=True)
+    # Display '_all' first
+    df = df[['_all'] + [col for col in df if col not in ['_all']]]
 
     time = datetime.now().strftime("%Y-%m-%d %H:%M")
     return render_template('totals.html', tables=[df.to_html(classes=['table', 'table-striped', 'table-hover'])], time=time)
