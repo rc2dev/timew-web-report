@@ -25,8 +25,9 @@ def view_totals():
     # Configure display
     df.fillna('-', inplace=True)
     df.sort_index(ascending=False, inplace=True)
-    # Display '_all' first
-    df = df[['_all'] + [col for col in df if col not in ['_all']]]
+    # Display '_all' and '_prod' first
+    df = df[['_all', '_prod'] +
+            [col for col in df if col not in ['_all', '_prod']]]
 
     time = datetime.now().strftime("%Y-%m-%d %H:%M")
     return render_template('totals.html', tables=[df.to_html(classes=['table', 'table-striped', 'table-hover'])], time=time)
