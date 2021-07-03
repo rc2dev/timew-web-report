@@ -14,6 +14,10 @@ pipenv install
 
 Run it with `pipenv run flask run`. You may replace this command with your preferred Python HTTP server.
 
+## Usage
+
+To use the web interface, browse to the address given by the previous command. The API is under `/api/totals`.
+
 ## Extra columns
 
 Besides the tags, there are two extra columns at the beginning of the table: `_all` and `_prod`:
