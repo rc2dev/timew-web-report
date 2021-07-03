@@ -14,6 +14,17 @@ pipenv install
 
 Run it with `pipenv run flask run`. You may replace this command with your preferred Python HTTP server.
 
+## Extra columns
+
+Besides the tags, there are two extra columns at the beginning of the table: `_all` and `_prod`:
+
+- `_all` is the total time tracked for each week.
+- `_prod` is the same but excludes the tags you configure. This is done through a custom Timewarrior config: `custom.unproductive_tags`. For example, to exclude foo and bar:
+
+  ```sh
+  timew config custom.unproductive_tags foo,bar
+  ```
+
 ## License
 
 Licensed under [GPLv3](LICENSE)
