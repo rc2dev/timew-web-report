@@ -7,7 +7,7 @@ Get Timewarrior's total time per tag per week through a web API/page.
 Clone this repository and install the dependencies:
 
 ```sh
-git clone https://github.com/rccavalcanti/timew-web-report
+git clone https://github.com/rc2dev/timew-web-report
 cd timew-web-report
 pipenv install
 ```
