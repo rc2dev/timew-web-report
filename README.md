@@ -33,4 +33,4 @@ Besides the tags, there are two extra columns at the beginning of the table: `_a
 
 Licensed under [GPLv3](LICENSE)
 
-Copyright (C) 2021 [Rafael Cavalcanti](https://rafaelc.org/)
+Copyright (C) 2021 [Rafael Cavalcanti](https://rafaelc.org/dev)
